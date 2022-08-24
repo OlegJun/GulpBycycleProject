@@ -1,0 +1,108 @@
+.header {
+	/* Делаю разметку header выравниваю на всю страницу, ставлю background */
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	background: url("../img/header__main/header__main-backround.png") center/cover no-repeat;
+		&__menu {
+			/* Задаю позицию меню и центрую его */
+			width: 80%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 35px 0 0 0;
+		}
+
+		&__menu-list {
+			/* Добавляю стили на сам список */
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		&__menu-child {
+			width: 86px;
+			text-align: center;
+			&.img {
+				width: auto;
+				margin-left: 10px;
+			}
+		}
+		&__child-link {
+			/* Стили для каждого текста */
+			font-size: 13px;
+			line-height: 1.2;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			color: $color-header-text;
+		}
+		&__menu-burger {
+			display: none;
+		}
+}
+
+@media (max-width: 767.98px) {
+	body.lock {
+		overflow: hidden;
+	}
+	.header {
+		&__menu {
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			transform: translate(0, -100%);
+			align-items: flex-start;
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100vh;
+				background-color: $color-header-text;
+				opacity: 0.6;
+				z-index: 1;
+			}
+			transition: all 0.7s;
+		&.active {
+			transform: translate(0, 0);
+		}
+		}
+		&__menu-list {
+			padding: 40px 0 0 0;
+			height: 80%;
+			flex-direction: column;
+			justify-content: space-around;
+			z-index: 2;
+		}
+		&__menu-child.img {
+			order: 1;
+		}
+		&__child-link {
+			color: aqua;
+		}
+	}
+	.header__menu-burger {
+		position: absolute;
+		display: block;
+		width: 30px;
+		height: 30px;
+		top: 20px;
+		right: 20px;
+	}
+	.phone__line {
+		position: absolute;
+		height: 2px;
+		width: 30px;
+		background-color: $color-header-text;
+		&-second {
+			margin: 10px 0 0 0;
+		}
+		&-third {
+			margin: 20px 0 0 0;
+		}
+	}
+}

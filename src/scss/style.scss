@@ -1,0 +1,26 @@
+@import "modules/nullstyle.scss";
+@import "modules/_variable.scss";
+@import "modules/main-style-project.scss";
+@import "modules/header.scss";
+@import "modules/generation__block.scss";
+
+
+* {
+   font-family: 'Lato', sans-serif;
+}
+
+body {
+   scroll-behavior: smooth;
+}
+
+.wrapper {
+   width: 100%;
+   min-height: 110vh;
+   display: flex;
+   flex-direction: column;
+}
+
+.main {
+   width: 100%;
+   flex: 1 1 auto;
+}
