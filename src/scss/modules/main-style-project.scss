@@ -17,3 +17,9 @@
    color: $color-from-text;
    margin-left: 7px;
 }
+
+* img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}

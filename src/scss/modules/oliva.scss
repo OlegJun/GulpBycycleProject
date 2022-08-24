@@ -1,0 +1,94 @@
+.oliva {
+width: 100%;
+max-height: 100%;
+   &__container {
+      display: flex;
+      height: 100%;
+   }
+   &__main {
+      min-height: 100%;
+      flex-basis: 66.6666%;
+      position: relative;
+      cursor: pointer;
+      &::before {
+         content: '';
+         transition: all 0.75s;
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         z-index: 3;
+         background-image: url('../img/olivia__block/olivia__logo.png');
+         background-repeat: no-repeat;
+         background-position: 50% 50%;
+         background-color: $backround-hover;
+         opacity: 0;
+      }
+      &:hover {
+         &::before {
+            content: '';
+            opacity: 1;
+         }
+      }
+   }
+
+   &__extra {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-basis: 33.3334%;
+   }
+}
+.extra {
+
+   &__body {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 12% 6%;
+      position: relative;
+      &::after {
+         content: '';
+         display: block;
+         width: 0;
+         height: 0;
+         border-left: 10px solid transparent;
+         border-right: 10px solid transparent;
+         border-top: 10px solid #fff;
+         position: absolute;
+         top: 100%;
+         left: 50%;
+         z-index: 2;
+      }
+      &-text {
+         position: relative;
+         &::after {
+            content: '';
+            display: block;
+            margin: 10px 0 0 0;
+            left: 44%;
+            position: absolute;
+            width: 50px;
+            height: 1px;
+            background-color: $color-from-text;
+            box-shadow: 1px 1px 5px $color-header-text;
+         }
+      }
+      &-title {
+         margin: 0 0 20px;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .oliva__container {
+      flex-direction: column;
+   }
+   .extra__body {
+      background-color: $main-backround-color;
+   }
+}
+
