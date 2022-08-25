@@ -50,6 +50,7 @@
       align-items: center;
       padding: 12% 6%;
       position: relative;
+      flex-basis: 66.6666;
          &::after {
             content: '';
             display: block;
@@ -83,6 +84,9 @@
                background-color: $color-from-text;
                box-shadow: 1px 1px 5px $color-header-text;
             }
+         }
+         &__img {
+            flex-basis: 33.3334%;
          }
    }
 

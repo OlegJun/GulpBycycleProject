@@ -1,15 +1,14 @@
-.boriosa {
+.hulot {
    width: 100%;
    max-height: 100%;
    &__container {
       display: flex;
-      flex-direction: row-reverse;
       height: 100%;
    }
 
-   &__main {
+   &__main-first {
       min-height: 100%;
-      flex-basis: 66.6666%;
+      flex-basis: 33.3333%;
       position: relative;
       cursor: pointer;
          &::before {
@@ -19,7 +18,7 @@
             width: 100%;
             height: 100%;
             z-index: 3;
-            background-image: url('../img/boriosa__block/boriosa__logo.png');
+            background-image: url('../img/hulot__block/hulot__logo.png');
             background-repeat: no-repeat;
             background-position: 50% 50%;
             background-color: $backround-hover;
@@ -41,10 +40,35 @@
       flex-basis: 33.3334%;
    }
 
+   &__main-second {
+      min-height: 100%;
+      flex-basis: 33.3333%;
+      position: relative;
+      cursor: pointer;
+         &::before {
+            content: '';
+            transition: all 0.75s;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            background-image: url('../img/hulot__block/hulot__logo.png');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-color: $backround-hover;
+            opacity: 0;
+         }
+         &:hover {
+            &::before {
+               content: '';
+               opacity: 1;
+            }
+         }
+   }
 }
 
 @media (max-width: 767.98px) {
-   .boriosa__container {
+   .hulot__container {
       flex-direction: column;
    }
 }
