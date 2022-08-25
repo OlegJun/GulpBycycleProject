@@ -1,10 +1,12 @@
-.oliva {
+.boriosa {
    width: 100%;
    max-height: 100%;
    &__container {
       display: flex;
+      flex-direction: row-reverse;
       height: 100%;
    }
+
    &__main {
       min-height: 100%;
       flex-basis: 66.6666%;
@@ -29,7 +31,7 @@
                opacity: 1;
             }
          }
-      }
+   }
 
    &__extra {
       min-height: 100%;
@@ -37,6 +39,9 @@
       flex-direction: column;
       justify-content: space-between;
       flex-basis: 33.3334%;
+   }
+
+   &__body-text {
    }
 }
 .extra {
@@ -63,15 +68,14 @@
             left: 50%;
             z-index: 2;
          }
-      }
+   }
 
-      &__body-title {
-         margin: 10px 0 10px;
-      }
+   &__body-title {
+      margin: 10px 0 10px;
+   }
 
-      &__body-text {
-         position: relative;
-         
+   &__body-text {
+      position: relative;
             &::after {
                content: '';
                display: block;
@@ -83,15 +87,6 @@
                background-color: $color-from-text;
                box-shadow: 1px 1px 5px $color-header-text;
             }
-         }
    }
 
-   @media (max-width: 767.98px) {
-      .oliva__container {
-         flex-direction: column;
-      }
-      .extra__body {
-         background-color: $main-backround-color;
-      }
-   }
-
+}
