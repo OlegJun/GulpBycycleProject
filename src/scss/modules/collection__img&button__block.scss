@@ -1,0 +1,110 @@
+.collection {
+   max-height: 100%;
+   width: 100%;
+   &__img-contain {
+      width: 100%;
+      max-height: 100%;
+      display: flex;
+   }
+
+   &__bicycle-seat {
+      width: 100%;
+      height: 100%;
+      flex-basis: 33.3333%;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__bicycle-img {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-basis: 33.3333%;
+   }
+
+   &__store-img {
+      width: 100%;
+      height: 100%;
+      flex-basis: 33.3334%;
+      display: flex;
+      flex-direction: column-reverse;
+   }
+
+   &__button {
+      width: 100%;
+      height: 15vh;
+      background-color: $backround-collection-abutton;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__button-href {
+      text-align: center;
+      padding: 20px 50px;
+      border: 1px solid rgba(255,255,255,.49);
+      color: #fff;
+   }
+}
+.bicycle-seat {
+
+   &__upper {
+   }
+
+   &__lower {
+   }
+}
+
+.small-two {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-basis: 50%;
+}
+.big-one {
+   width: 100%;
+   height: 100%;
+   flex-basis: 50%;
+}
+.store-img {
+
+   &__lower {
+   }
+
+   &__upper {
+   }
+}
+
+
+.img__contain {
+   position: relative;
+   cursor: pointer;
+   &::before {
+      content: '';
+      transition: all 0.75s;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      background-image: url('../img/shop__block/hover__logo.webp');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-color: $backround-hover;
+      opacity: 0;
+   }
+   &:hover {
+      &::before {
+         content: '';
+         opacity: 1;
+      }
+   }
+   &-two-block {
+      flex-basis: 50%;
+   }
+}
+
+@media (max-width: 767.98px) {
+   .collection__img-contain {
+      flex-direction: column;
+   }
+}

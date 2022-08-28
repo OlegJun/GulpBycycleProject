@@ -7,6 +7,7 @@
 @import "modules/boriosa__block.scss";
 @import "modules/hulot__block.scss";
 @import "modules/carousel__block.scss";
+@import "modules/collection__img&button__block.scss";
 
 
 * {
@@ -16,6 +17,18 @@
 body {
    scroll-behavior: smooth;
 }
+
+
+::-webkit-scrollbar {
+   width: 8px;
+   background: $main-backround-color;
+}
+
+::-webkit-scrollbar-thumb {
+   width: 8px;
+   background-color: $color-from-text;
+}
+
 
 .wrapper {
    width: 100%;
