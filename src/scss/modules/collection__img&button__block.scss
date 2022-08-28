@@ -43,7 +43,21 @@
       text-align: center;
       padding: 20px 50px;
       border: 1px solid rgba(255,255,255,.49);
+      padding: 20px 57.5px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .2em;
       color: #fff;
+      -webkit-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+         &:hover {
+            background-color: rgba(0, 0, 0, 0.096);
+            box-shadow: 2px 2px 5px $color-from-text;
+         }
    }
 }
 .bicycle-seat {
