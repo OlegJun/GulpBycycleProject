@@ -15,10 +15,11 @@ isWebp();
 
 
    const aHref = document.querySelectorAll('a')
-
-   console.log(aHref)
+   const submission = document.querySelector('.submission')
 
    aHref.forEach(el => el.onclick = () => false)
+
+   submission.onsubmit = (() => false)
 
 
 
