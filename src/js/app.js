@@ -14,9 +14,11 @@ isWebp();
    });
 
 
+   const aHref = document.querySelectorAll('a')
 
+   console.log(aHref)
 
-
+   aHref.forEach(el => el.onclick = () => false)
 
 
 
